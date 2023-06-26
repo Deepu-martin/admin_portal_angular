@@ -13,7 +13,7 @@ export class AppComponent {
     let arr=[10,12,4,22,22,22,23,23,78,55,43,10,21,77]
     console.log(this.bubbleSort(arr))
     console.log(this.selectionSort([3,2,1,4,6,5,7,9,8,10]))
-    console.log(this.globalLinearSearch(arr,78))
+    console.log(this.linearSearch(arr,78))
   }
   bubbleSort(array:any){
     let temp=[]
@@ -55,15 +55,33 @@ export class AppComponent {
     return array;
   }
 
-   globalLinearSearch(arr:any, key:any){
+   linearSearch(arr:any, value:any){
     let results = []
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] === key){
+        if(arr[i] === value){
             results.push(i)
         }
     }
     return results
 }
+// [1,2,4,3,0,9,8] 8
+// binarySearch(arr:any,value:any){
+//   if(arr.length-1){
+//     return false;
+//   }
+
+// // find the middle index
+// let middleIndex=Math.floor(arr.length/2);
+
+// if(arr[middleIndex]===value){
+//   return true;
+// }
+
+
+
+
+
+// }
 
 //   Linear search
 // Binary search
